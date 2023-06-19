@@ -42,10 +42,11 @@ const Adddress = () => {
     discountStartValidityDate: "",
     discountValidityDate: "",
     depositAmount: "",
+    preprationDays: "",
   }
 
   // handling form data using formik
-  
+
   const [isButtonDisabled, setIsButtonDisabled] = useState(false)
   const {
     handleChange,
@@ -75,22 +76,22 @@ const Adddress = () => {
       }
     },
   })
-console.log("values",values);
-console.log("error",errors);
+  console.log("values", values)
+  console.log("error", errors)
   // handling discount validity start and end date
   const discStartDate = event => {
     // const date = new Date(event.target.value).toLocaleDateString()
     // const parts = date.split("/").map(part => part.padStart(2, "0"))
     // const formattedDate = `${parts[2]}-${parts[0]}-${parts[1]}`
     // setFieldValue("discountStartValidityDate", formattedDate)
-    setFieldValue("discountStartValidityDate",event.target.value)
+    setFieldValue("discountStartValidityDate", event.target.value)
   }
   const discEndDate = event => {
     // const date = new Date(event.target.value).toLocaleDateString()
     // const parts = date.split("/").map(part => part.padStart(2, "0"))
     // const formattedDate = `${parts[2]}-${parts[0]}-${parts[1]}`
     // setFieldValue("discountValidityDate", formattedDate)
-    setFieldValue("discountValidityDate",event.target.value)
+    setFieldValue("discountValidityDate", event.target.value)
   }
   // file upload
 
@@ -105,7 +106,7 @@ console.log("error",errors);
     backFileInputRef.current.click()
   }
   //handle front image
-  const handleFrontImage = async (e) => {
+  const handleFrontImage = async e => {
     try {
       // debugger
       setImgLoader({ ...imgLoader, frontImg: true })
@@ -203,16 +204,19 @@ console.log("error",errors);
 
           <div className="row">
             <div className="col-xs-12">
-            <form onSubmit={handleSubmit}>
-              <div className="card">
-                <div className="card-body">
-                  <div className="card-title mb-3 card-title_h3">Basic Information</div>
+              <form onSubmit={handleSubmit}>
+                <div className="card">
+                  <div className="card-body">
+                    <div className="card-title mb-3 card-title_h3">
+                      Basic Information
+                    </div>
 
-                 
                     <div className="row">
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="code" className="header">Store</label>
+                          <label htmlFor="code" className="header">
+                            Store
+                          </label>
                           <select
                             className="form-control select2"
                             name="store"
@@ -232,7 +236,9 @@ console.log("error",errors);
                       </div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="dresstype" className="header">Category</label>
+                          <label htmlFor="dresstype" className="header">
+                            Category
+                          </label>
                           <select
                             className="form-control select2"
                             name="categoryId"
@@ -267,7 +273,9 @@ console.log("error",errors);
 
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="uniquecode" className="header">Product Name</label>
+                          <label htmlFor="uniquecode" className="header">
+                            Product Name
+                          </label>
                           <input
                             type="text"
                             name="name"
@@ -286,7 +294,9 @@ console.log("error",errors);
                       </div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="10days" className="header">Supplier Name</label>
+                          <label htmlFor="10days" className="header">
+                            Supplier Name
+                          </label>
                           <input
                             type="text"
                             name="supplierName "
@@ -307,7 +317,9 @@ console.log("error",errors);
                       </div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="price" className="header">Purchase Price</label>
+                          <label htmlFor="price" className="header">
+                            Purchase Price
+                          </label>
                           <input
                             id="price"
                             name="purchasePrice"
@@ -327,7 +339,9 @@ console.log("error",errors);
                       </div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="amt" className="header">Deposit Amount</label>
+                          <label htmlFor="amt" className="header">
+                            Deposit Amount
+                          </label>
                           <input
                             type="number"
                             name="depositAmount"
@@ -344,10 +358,37 @@ console.log("error",errors);
                           )}
                         </div>
                       </div>
-                      <div className="card-title card-title_h3 mb-3">Fabric</div>
+
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="dressfabric" className="header">Top Fabric</label>
+                          <label htmlFor="amt" className="header">
+                            Preparation Days
+                          </label>
+                          <input
+                            type="number"
+                            name="preprationDays"
+                            className="form-control"
+                            placeholder="Enter Preparation Days"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                          />
+                          {errors.preprationDays && touched.preprationDays && (
+                            <span style={{ color: "red" }}>
+                              {" "}
+                              {errors.preprationDays}{" "}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="card-title card-title_h3 mb-3">
+                        Fabric
+                      </div>
+                      <div className="col-sm-6">
+                        <div className="mb-3">
+                          <label htmlFor="dressfabric" className="header">
+                            Top Fabric
+                          </label>
                           <input
                             type="text"
                             name="topFabric"
@@ -367,7 +408,9 @@ console.log("error",errors);
 
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="dressfabric" className="header">Bottom Fabric</label>
+                          <label htmlFor="dressfabric" className="header">
+                            Bottom Fabric
+                          </label>
 
                           <input
                             type="text"
@@ -386,10 +429,14 @@ console.log("error",errors);
                         </div>
                       </div>
                       <div className="mb-3 row">
-                        <div className="card-title  card-title_h3 mb-3">Packages</div>
+                        <div className="card-title  card-title_h3 mb-3">
+                          Packages
+                        </div>
                         <div className="col-sm-4">
                           <div className="mb-3">
-                            <label htmlFor="3days" className="header">Rent price 3 days</label>
+                            <label htmlFor="3days" className="header">
+                              Rent price 3 days
+                            </label>
                             <input
                               id="3days"
                               name="rentPriceFor3Days"
@@ -410,7 +457,9 @@ console.log("error",errors);
                         </div>
                         <div className="col-sm-4">
                           <div className="mb-3">
-                            <label htmlFor="7days" className="header">Rent price for 7 days</label>
+                            <label htmlFor="7days" className="header">
+                              Rent price for 7 days
+                            </label>
                             <input
                               id="7days"
                               name="rentPriceFor7Days"
@@ -452,10 +501,14 @@ console.log("error",errors);
                               )}
                           </div>
                         </div>
-                        <div className="card-title  card-title_h3">Discount </div>
+                        <div className="card-title  card-title_h3">
+                          Discount{" "}
+                        </div>
                         <div className="col-sm-4">
                           <div className="mb-3">
-                            <label htmlFor="10days" className="header">Discount Amount</label>
+                            <label htmlFor="10days" className="header">
+                              Discount Amount
+                            </label>
                             <input
                               type="number"
                               name="discountAmount "
@@ -477,7 +530,9 @@ console.log("error",errors);
                         </div>
                         <div className="col-sm-4">
                           <div className="mb-3">
-                            <label htmlFor="fromdate" className="header">Validity Date</label>
+                            <label htmlFor="fromdate" className="header">
+                              Validity Date
+                            </label>
                             <input
                               id="discountStartValidityDate"
                               type="date"
@@ -499,7 +554,9 @@ console.log("error",errors);
                         </div>
                         <div className="col-sm-4">
                           <div className="mb-3">
-                            <label htmlFor="fromdate" className="header">Till Date</label>
+                            <label htmlFor="fromdate" className="header">
+                              Till Date
+                            </label>
                             <input
                               id="discountValidityDate"
                               type="date"
@@ -520,153 +577,156 @@ console.log("error",errors);
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="mb-3">
+                          <label className="mb-3  header">
+                            Product Description
+                          </label>
+                          <TextEditor setFieldValue={setFieldValue} />
+                          {errors.description && touched.description && (
+                            <span style={{ color: "red" }}>
+                              {errors.description}{" "}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    
-                      </div>
-                      </div>
-                      <div className="card">
-                        <div className="card-body">
-                          <div className="row">
-                            <div className="col-md-12">
-                      <div className="mb-3">
-                        <label className="mb-3  header">Product Description</label>
-                        <TextEditor setFieldValue={setFieldValue} />
-                        {errors.description && touched.description && (
+                    </div>
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="mb-3 mt-3 col-md-6">
+                        <label className="mb-3 header ">
+                          {" "}
+                          Product Front Images
+                        </label>
+                        <div
+                          className="Neon Neon-theme-dragdropbox"
+                          onClick={handleFrontImgClick}
+                        >
+                          <input
+                            className="file_upload"
+                            name="frontImage"
+                            ref={frontFileInputRef}
+                            accept="image/png, image/jpeg, image/gif"
+                            id="filer_input2"
+                            multiple="multiple"
+                            type="file"
+                            onChange={handleFrontImage}
+                            onBlur={handleBlur}
+                          />
+
+                          <div className="Neon-input-dragDrop">
+                            {frontImg && !errors.frontImage ? (
+                              <img
+                                src={`${frontImg}`}
+                                alt="frontImage"
+                                width={"250px"}
+                                height={"250px"}
+                              />
+                            ) : imgLoader.frontImg ? (
+                              <div>Uploading...! </div>
+                            ) : (
+                              <div className="Neon-input-inner">
+                                <div className="Neon-input-text">
+                                  <i className="display-4 text-muted bx bxs-cloud-upload"></i>
+                                </div>
+                                <a className="Neon-input-choose-btn blue">
+                                  Drop files here or click to upload.
+                                </a>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {errors.frontImage && touched.frontImage && (
                           <span style={{ color: "red" }}>
-                            {errors.description}{" "}
+                            {" "}
+                            {errors.frontImage}{" "}
                           </span>
                         )}
                       </div>
-                      </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="card">
-                        <div className="card-body">
-                      <div className="row">
-                        <div className="mb-3 mt-3 col-md-6">
-                          <label className="mb-3 header "> Product Front Images</label>
-                          <div
-                            className="Neon Neon-theme-dragdropbox"
-                            onClick={handleFrontImgClick}
-                          >
-                            <input
-                              className="file_upload"
-                              name="frontImage"
-                              ref={frontFileInputRef}
-                              accept="image/png, image/jpeg, image/gif"
-                              id="filer_input2"
-                              multiple="multiple"
-                              type="file"
-                              onChange={handleFrontImage}
-                              onBlur={handleBlur}
-                            />
-
-                            <div className="Neon-input-dragDrop">
-                              {frontImg && !errors.frontImage ? (
-                                <img
-                                  src={`${frontImg}`}
-                                  alt="frontImage"
-                                  width={"250px"}
-                                  height={"250px"}
-                                />
-                              ) : imgLoader.frontImg ? (
-                                <div>Uploading...! </div>
-                              ) : (
-                                <div className="Neon-input-inner">
-                                  <div className="Neon-input-text">
-                                    <i className="display-4 text-muted bx bxs-cloud-upload"></i>
-                                  </div>
-                                  <a className="Neon-input-choose-btn blue">
-                                    Drop files here or click to upload.
-                                  </a>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                          {errors.frontImage && touched.frontImage && (
-                            <span style={{ color: "red" }}>
-                              {" "}
-                              {errors.frontImage}{" "}
-                            </span>
-                          )}
-                        </div>
-                        <div className="mb-3 mt-3 col-md-6">
-                          <label className=" mb-3 header" >Product Back Images</label>
-                          <div
-                            className="Neon Neon-theme-dragdropbox"
-                            onClick={handleBackImgClick}
-                          >
-                            <input
-                              className="file_upload"
-                              name="backImage"
-                              ref={backFileInputRef}
-                              accept="image/*"
-                              id="filer_input2"
-                              multiple="multiple"
-                              type="file"
-                              onChange={e => handleBackImage(e)}
-                              onBlur={handleBlur}
-                            />
-
-                            <div className="Neon-input-dragDrop">
-                              {backImg && !errors.backImage ? (
-                                <img
-                                  src={`${backImg}`}
-                                  alt="frontImage"
-                                  width={"250px"}
-                                  height={"250px"}
-                                />
-                              ) : imgLoader.backImg ? (
-                                <div>Uploading...! </div>
-                              ) : (
-                                <div className="Neon-input-inner">
-                                  <div className="Neon-input-text">
-                                    <i className="display-4 text-muted bx bxs-cloud-upload"></i>
-                                  </div>
-                                  <a className="Neon-input-choose-btn blue">
-                                    Drop files here or click to upload.
-                                  </a>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                          {errors.backImage && touched.backImage && (
-                            <span style={{ color: "red" }}>
-                              {" "}
-                              {errors.backImage}{" "}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      <div className="d-flex flex-wrap gap-2">
-                        <button
-                          type="submit"
-                          color="primary"
-                          className="btn btn-primary "
-                          disabled={isButtonDisabled}
+                      <div className="mb-3 mt-3 col-md-6">
+                        <label className=" mb-3 header">
+                          Product Back Images
+                        </label>
+                        <div
+                          className="Neon Neon-theme-dragdropbox"
+                          onClick={handleBackImgClick}
                         >
-                          Submit
-                        </button>
-                        <Link
-                          type="submit"
-                          to="/Rentdress"
-                          color="secondary"
-                          className="btn btn-secondary"
-                        >
-                          Back
-                        </Link>
-                      
+                          <input
+                            className="file_upload"
+                            name="backImage"
+                            ref={backFileInputRef}
+                            accept="image/*"
+                            id="filer_input2"
+                            multiple="multiple"
+                            type="file"
+                            onChange={e => handleBackImage(e)}
+                            onBlur={handleBlur}
+                          />
+
+                          <div className="Neon-input-dragDrop">
+                            {backImg && !errors.backImage ? (
+                              <img
+                                src={`${backImg}`}
+                                alt="frontImage"
+                                width={"250px"}
+                                height={"250px"}
+                              />
+                            ) : imgLoader.backImg ? (
+                              <div>Uploading...! </div>
+                            ) : (
+                              <div className="Neon-input-inner">
+                                <div className="Neon-input-text">
+                                  <i className="display-4 text-muted bx bxs-cloud-upload"></i>
+                                </div>
+                                <a className="Neon-input-choose-btn blue">
+                                  Drop files here or click to upload.
+                                </a>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {errors.backImage && touched.backImage && (
+                          <span style={{ color: "red" }}>
+                            {" "}
+                            {errors.backImage}{" "}
+                          </span>
+                        )}
                       </div>
                     </div>
-                 
+                    <div className="d-flex flex-wrap gap-2">
+                      <button
+                        type="submit"
+                        color="primary"
+                        className="btn btn-primary "
+                        disabled={isButtonDisabled}
+                      >
+                        Submit
+                      </button>
+                      <Link
+                        type="submit"
+                        to="/Rentdress"
+                        color="secondary"
+                        className="btn btn-secondary"
+                      >
+                        Back
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                </form>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-     
+      </div>
     </React.Fragment>
   )
 }

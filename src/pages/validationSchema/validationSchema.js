@@ -48,4 +48,5 @@ export const productValidationSchema = Yup.object({
     .required("Discount validity end date is required"),
   depositAmount: Yup.number().required("Deposit amount is required").nullable(),
   store: Yup.string().required("Store  is required"),
+  preprationDays: Yup.string().required("Preparation Days is required"),
 })

@@ -44,7 +44,8 @@ const EcommerceAddProduct = () => {
     depositAmount: data?.depositAmount,
     discountAmount: data?.discountAmount,
     discountStartValidityDate: data?.discountStartValidityDate.substring(0, 10),
-    discountValidityDate : data?.discountValidityDate.substring(0, 10)
+    discountValidityDate : data?.discountValidityDate.substring(0, 10),
+    preprationDays: data?.preprationDays,
   }
 
   // handling form data using formik
@@ -343,6 +344,28 @@ const EcommerceAddProduct = () => {
                           )}
                         </div>
                       </div>
+
+                      <div className="col-sm-6">
+                        <div className="mb-3">
+                          <label htmlFor="amt" className="header">Preparation Days</label>
+                          <input
+                            type="number"
+                            name="preprationDays"
+                            className="form-control"
+                            value={values.preprationDays}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                          />
+                          {errors.preprationDays && touched.preprationDays && (
+                            <span style={{ color: "red" }}>
+                              {" "}
+                              {errors.preprationDays}{" "}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+
                       <div className="card-title  card-title_h3 mb-3">Fabric</div>
                       <div className="col-sm-6">
                         <div className="mb-3">
