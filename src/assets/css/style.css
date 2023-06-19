@@ -929,3 +929,9 @@ address{
 .navtab-bg .nav-item{
   white-space: nowrap;
 }
+.w-20{
+  width: 20%;
+}
+.w-40{
+  width:40%;
+}

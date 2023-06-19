@@ -65,7 +65,7 @@ const Calender = props => {
 
   const calenderAvailability = async () => {
     console.log("uniqueCode")
-    console.log("uniqueCode", location.state.item.uniqueCode)
+    console.log("uniqueCode", location?.state?.item?.uniqueCode)
     try {
       if (location?.state?.item?.uniqueCode) {
         const res = await get(

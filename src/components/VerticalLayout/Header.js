@@ -386,8 +386,12 @@ const Header = props => {
             </div> */}
 
             {/* <NotificationDropdown /> */}
-            <ProfileMenu />
+            {/* <ProfileMenu /> */}
 
+            <Link to="/logout" className="dropdown-item">
+            <i className="bx bx-power-off font-size-16 align-middle me-1 text-danger" />
+            <span>{props.t("Logout")}</span>
+          </Link>
             {/* <div
                onClick={() => {
                 props.showRightSidebarAction(!props.showRightSidebar);
