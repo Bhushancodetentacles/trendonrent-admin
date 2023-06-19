@@ -98,8 +98,9 @@ const Invoice = props => {
                   <div className="heading">
                     <h1>Invoice</h1>
                   </div>
-                  <div className="invoice_bill" style={{ display: "flex" }}>
-                    <div className="col-sm-6" style={{ width: "50%" }}>
+                 
+                  <div className="invoice_bill">
+                    <span className="invoice_bill1">
                       <address>
                         <strong className="heading_in1">Billed To :</strong>
 
@@ -115,10 +116,10 @@ const Invoice = props => {
                           </p>
                         </div>
                       </address>
-                    </div>
-                    <div
-                      className="col-sm-6"
-                      style={{ width: "50%", textAlign: "right" }}
+                    </span>
+                    <span
+                      className="invoice_bill1"
+                      style={{ textAlign: "right" }}
                     >
                       <address>
                         <strong className="heading_in1">Order No.</strong>
@@ -128,7 +129,7 @@ const Invoice = props => {
                         <strong className="heading_in1">Order Date :</strong>
                         <p className="text-muted">{invoiceData?.date}</p>
                       </address>
-                    </div>
+                    </span>
                   </div>
 
                   <div className="table-responsive table_in mb-3">
@@ -193,25 +194,7 @@ const Invoice = props => {
                   </div>
                   <div className="row invoice_term" style={{ display: "flex" }}>
                     <div className="col-md-7" style={{ width: "70%" }}>
-                      <div className="termcondition">
-                        <h3 className="heading_in1">Terms & Conditions</h3>
-                        <ul>
-                            <li><b>Minimum Renting Duration: </b> <strong>3 days.</strong>
-                                <ul>
-                                    <li><b>First Day-</b> Dress can be picked up anytime after <strong>2:00 pm</strong> </li>
-                                    <li><b>Second Day - </b> Highlight day when you'll look amazing and be the center of attraction.</li>
-                                    <li><b>Third Day  - </b> Dress must be returned before <strong>8:30 pm </strong></li>
-                                </ul>
-                            </li>
-                            <li><b> Renting Packages: </b> We offer <strong>3-day</strong>, <strong>7-day</strong> and <strong>10-day </strong> packages with pickup and return on the first and last day respectively.</li>
-                            <li> <b>Pickup and Return Timing:</b> For all rentals, pickup after <strong>2:00 pm </strong> and return before <strong>8:30 pm.</strong></li>
-                            <li><b>Delay in Return:</b> Please inform us in advance for any delays. No charge for delays of a few hours, but additional charges for non-return on the designated day.</li>
-                           <li><b> Non-Refundable Rent Amount:</b> Rent paid is non-refundable</li>
-                           <li><b>Deposit Amount:</b> A deposit is required to secure the dress. Deposit varies for each dress and is specified during rental. Deposit returned within <strong> 3 days </strong> of dress return.</li>
-                            <li><b>Trend on Rent </b> denies liability for losses caused by handover delays and defers all matters to the Pune court</li>
-                           </ul> 
-                           <em className="termsem">By renting a dress, you agree to abide by these terms and conditions.</em>
-                      </div>
+                    
                         </div>
                        
                 
@@ -269,6 +252,25 @@ const Invoice = props => {
                   style={{ height: "100vh" }}
                 >
                   <div className="card-body">
+                  <div className="termcondition">
+                        <h3 className="heading_in1">Terms & Conditions</h3>
+                        <ul>
+                            <li><b>Minimum Renting Duration: </b> <strong>3 days.</strong>
+                                <ul>
+                                    <li><b>First Day-</b> Dress can be picked up anytime after <strong>2:00 pm</strong> </li>
+                                    <li><b>Second Day - </b> Highlight day when you'll look amazing and be the center of attraction.</li>
+                                    <li><b>Third Day  - </b> Dress must be returned before <strong>8:30 pm </strong></li>
+                                </ul>
+                            </li>
+                            <li><b> Renting Packages: </b> We offer <strong>3-day</strong>, <strong>7-day</strong> and <strong>10-day </strong> packages with pickup and return on the first and last day respectively.</li>
+                            <li> <b>Pickup and Return Timing:</b> For all rentals, pickup after <strong>2:00 pm </strong> and return before <strong>8:30 pm.</strong></li>
+                            <li><b>Delay in Return:</b> Please inform us in advance for any delays. No charge for delays of a few hours, but additional charges for non-return on the designated day.</li>
+                           <li><b> Non-Refundable Rent Amount:</b> Rent paid is non-refundable</li>
+                           <li><b>Deposit Amount:</b> A deposit is required to secure the dress. Deposit varies for each dress and is specified during rental. Deposit returned within <strong> 3 days </strong> of dress return.</li>
+                            <li><b>Trend on Rent </b> denies liability for losses caused by handover delays and defers all matters to the Pune court</li>
+                           </ul> 
+                           <em className="termsem">By renting a dress, you agree to abide by these terms and conditions.</em>
+                      </div>
                     <div className="policy">
                       <h3 className="heading_in1">Policy</h3>
                       <ul>

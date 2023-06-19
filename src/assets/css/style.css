@@ -935,3 +935,10 @@ address{
 .w-40{
   width:40%;
 }
+.invoice_bill{
+  display: flex;
+  /* flex: 0 0 50%; */
+}
+/* .invoice_bill1{
+  width:50%
+} */
