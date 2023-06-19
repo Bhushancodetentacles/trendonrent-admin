@@ -69,7 +69,7 @@ const Calender = props => {
     try {
       if (location?.state?.item?.uniqueCode) {
         const res = await get(
-          `Order/getCalendarAvailability?uniqueCode=${location.state.item.uniqueCode}`
+          `Order/getCalendarAvailability?uniqueCode=${location?.state?.item?.uniqueCode}`
         )
         console.log(res)
         const result = await res.data.list
