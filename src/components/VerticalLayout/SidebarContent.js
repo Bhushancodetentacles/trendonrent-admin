@@ -214,6 +214,12 @@ const SidebarContent = props => {
                 <span>{props.t("Category")}</span>
               </Link>
             </li>
+            <li>
+              <Link to="/Notification" id="notification_tab">
+                <i className="mdi mdi-message-processing-outline"></i>
+                <span>{props.t("Notification")}</span>
+              </Link>
+            </li>
             {/* <li>
               <Link to="/transaction" >
                 <i className="bx bx-receipt"></i>

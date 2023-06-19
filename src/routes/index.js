@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom"
 
 import "../assets/css/style.css"
 
-
+import Notification from "../pages/Notification/notification"
 // Profile
 import UserProfile from "../pages/Authentication/user-profile"
 
@@ -72,7 +72,7 @@ import { components } from "react-select"
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
   {path:"/Policy" ,component:<Policy/>},
-  
+  {path:"/Notification" , component:<Notification/>},
   {path:"/Invoice/:invoiceId" , component:<Invoice/>},
   { path: "/transaction", component: <Transaction /> },
   { path: "/Viewtransaction", component: <Viewtransaction /> },
