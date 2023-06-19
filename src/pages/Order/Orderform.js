@@ -986,7 +986,7 @@ const Orderform = () => {
                             className="form-control"
                             placeholder="Total Redeemed Loyalty Points"
                             onChange={e => handleInputChange(e)}
-                            readOnly
+                            // readOnly
                           />
                         </div>
                       </div>

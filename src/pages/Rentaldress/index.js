@@ -332,6 +332,7 @@ const Rentdress = () => {
                             <th className="text-center">
                               Rent Price for 10days
                             </th>
+                            <th className="text-center">Preaparation Days</th>
                             <th className="text-center">Recovery Amt.</th>
                             <th className="text-center">Action</th>
                           </tr>
@@ -369,6 +370,9 @@ const Rentdress = () => {
                                   </td>
                                   <td className="text-center">
                                     {item.rentPriceFor10Days}
+                                  </td>
+                                  <td className="text-center">
+                                    {item.preprationDays}
                                   </td>
                                   <td className="text-center">
                                     {item.recoveryAmount}
