@@ -788,14 +788,15 @@ color: #00000070;
 .card-in{
   background-color:#f0beba38 !important;
 }
-.card-in .card-body{
+ .card-in .card-body{
   padding: 2rem 2rem 2.5rem!important;
-}
+} 
 @media print{
   .card-in{
     -webkit-print-color-adjust: exact; /* Chrome, Safari */
     color-adjust: exact; 
     print-color-adjust: exact;
+    height:100vh !important;
   }
 }
 .table_in{
@@ -804,6 +805,12 @@ color: #00000070;
 .table_in  .table-bordered {
   border: 1px solid #888993 !important;
 
+}
+.print-row{
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  float: right;
 }
 .table_in .table tr th , .table_in .table tr td{
   text-align:  center !important;
@@ -853,7 +860,7 @@ address{
   letter-spacing: 0.3px;
   color: #74788d;
 }
-.termcondition ul li b{
+.termcondition ul li b,.policy ul li b{
   color:#ef8a95 ;
 }
 .termsem{
@@ -865,9 +872,9 @@ address{
 
  
 }
-.policy-in .card-body{
+/* .policy-in .card-body{
   padding: 5rem 2.2rem !important;
-}
+} */
 @media (max-width:500px) {
   .form-control {
     margin-bottom: 10px;
@@ -942,3 +949,85 @@ address{
 /* .invoice_bill1{
   width:50%
 } */
+.table-invoice{
+  width: 100%;
+}
+.table-invoice td{
+  width: 50%;
+}
+.table-total{
+  width:30% !important;
+  float: right;
+}
+.invoice_term{
+  width: 100%;
+}
+.w-50{
+  width:50%;
+}
+.card-in{
+  width:100% !important
+}
+.table-print{
+  width: 20% !important;
+  float: right;
+}
+@media print {
+  body {
+    margin: 0 !important;
+    padding:0 !important;
+  }
+  .card{
+    margin: 0 !important;
+  }
+  .page-content{
+    padding:0 !important;
+    margin:0 !important;
+    width:100% !important;
+  }
+  .layout-wrapper{
+    padding:0 !important;
+    margin:0 !important;
+    width:100% !important;
+  }
+  .main-content{
+    padding:0 !important;
+    margin:0 !important;
+    width:100% !important;
+    overflow: hidden !important;
+  } 
+  .table-decription th{
+    font-size: 11px !important;
+  }
+  .table-decription td{
+    font-size: 11px !important;
+  }
+  .table-decription
+  {
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+  }
+  .card{
+    width:100% !important;
+    padding: 0 !important;
+  }
+  .card-body{
+    padding:0 !important;
+    margin: 0 !important;
+  }
+  .container-fluid{
+    padding:0 !important;
+    margin: 0 !important;
+  }
+}
+.table-decription{
+  width: 100% !important;
+  margin-bottom: 40px;
+}
+.termcondition {
+  margin-bottom: 20px;
+}
+.print-row{
+  width: 100%;
+}
+
