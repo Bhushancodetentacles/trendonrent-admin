@@ -315,7 +315,7 @@ const Adddress = () => {
                           )}
                         </div>
                       </div>
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="price" className="header">
                             Purchase Price
@@ -337,7 +337,7 @@ const Adddress = () => {
                           )}
                         </div>
                       </div>
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="amt" className="header">
                             Deposit Amount
@@ -359,7 +359,7 @@ const Adddress = () => {
                         </div>
                       </div>
 
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="amt" className="header">
                             Preparation Days

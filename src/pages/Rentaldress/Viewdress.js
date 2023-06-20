@@ -254,6 +254,16 @@ const Viewdress = () => {
                                       {productData.supplierName}
                                     </p>
                                   </div>
+                                  
+                                  <div className="d-flex">
+                                    <h5 className="font-size-14">
+                                      Preparation Days{" "}
+                                    </h5>
+                                    <span className="px-1">:</span>
+                                    <p className="text-muted">
+                                    sahasb
+                                    </p>
+                                  </div>
 
                                 </div>
                                 <div className="mt-3 col-md-6">

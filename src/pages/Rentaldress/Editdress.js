@@ -303,7 +303,7 @@ const EcommerceAddProduct = () => {
                           )}
                         </div>
                       </div>
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="price" className="header">Purchase Price</label>
                           <input
@@ -324,7 +324,7 @@ const EcommerceAddProduct = () => {
                           )}
                         </div>
                       </div>
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="amt" className="header">Deposit Amount</label>
                           <input
@@ -345,7 +345,7 @@ const EcommerceAddProduct = () => {
                         </div>
                       </div>
 
-                      <div className="col-sm-6">
+                      <div className="col-sm-4">
                         <div className="mb-3">
                           <label htmlFor="amt" className="header">Preparation Days</label>
                           <input
