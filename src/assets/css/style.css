@@ -1030,4 +1030,16 @@ address{
 .print-row{
   width: 100%;
 }
-
+.heading_in2{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  }
+  .policy_ul li{
+    font-size: 16px !important;
+    letter-spacing: 0.5px !important;
+  }
+.policy_page{
+  margin-top:25px
+}
