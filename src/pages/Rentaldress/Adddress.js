@@ -131,8 +131,9 @@ const Adddress = () => {
       frontFileInputRef.current.value = ""
     } catch (error) {
       console.log("error")
+      console.log(error)
       setImgLoader({ ...imgLoader, frontImg: false })
-      toast.error(error.response.statusText)
+      toast.error(error.response.data.Error[0])
       frontFileInputRef.current.value = ""
       throw error
     }
