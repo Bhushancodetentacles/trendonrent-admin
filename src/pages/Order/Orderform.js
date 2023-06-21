@@ -334,6 +334,13 @@ const Orderform = () => {
         setAvailabilityError(true)
       }
     }
+
+    setData(prevData => {
+      return {
+        ...prevData,
+        ["totalRedeemLoyaltyPoint"]: Math.floor(data.totalLoyaltyPoint/2),
+      }
+    })
   }
   // to check the date availability end
 
@@ -986,6 +993,7 @@ const Orderform = () => {
                             className="form-control"
                             placeholder="Total Redeemed Loyalty Points"
                             onChange={e => handleInputChange(e)}
+                            value={data?.totalRedeemLoyaltyPoint ? data?.totalRedeemLoyaltyPoint: (data.totalLoyaltyPoint)? Math.floor(data.totalLoyaltyPoint/2) : 0}
                             // readOnly
                           />
                         </div>

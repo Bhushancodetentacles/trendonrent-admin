@@ -110,7 +110,7 @@ const Invoice = props => {
                           <p className="text-muted invoice_add">
                             {invoiceData?.billToMobileNo}
                           </p>
-                          <p className="text-muted invoice_add">
+                          <p className="text-muted invoice_add w-40">
                             {invoiceData?.billToAddress}
                           </p>
                         </div>
@@ -136,6 +136,7 @@ const Invoice = props => {
                       <thead>
                         <tr>
                           <th className="w-2">Sr No.</th>
+                          <th className="w-20">Unique Code</th>
                           <th className="w-30">Description</th>
                           <th className="w-10">Pickup Date</th>
                           <th className="w-10">Return Date</th>
