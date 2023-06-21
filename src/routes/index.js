@@ -70,6 +70,7 @@ import EditCategory from "../pages/Category/EditCategory"
 // import Home from "../pages/Home/Home";
 import { components } from "react-select"
 import Policy from "pages/Policy/Policy"
+import TermsAndConditions from "pages/Policy/TermsAndConditions"
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
   // {path:"/Policy" ,component:<Policy/>},
@@ -149,6 +150,7 @@ const publicRoutes = [
   { path: "/forgot-password", component: <ForgetPwd /> },
   { path: "/register", component: <Register /> },
   { path: "/policy", component: <Policy/> },
+  { path: "/terms-and-conditions", component: <TermsAndConditions/> },
 ]
 
 export { authProtectedRoutes, publicRoutes }
