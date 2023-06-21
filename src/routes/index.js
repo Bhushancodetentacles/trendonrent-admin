@@ -30,7 +30,7 @@ import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct"
 import InvoicesList from "../pages/Invoices/invoices-list"
 import InvoiceDetail from "../pages/Invoices/invoices-detail"
 import Invoice from "../pages/Invoice/invoice";
-import Policy from "../pages/Invoice/Policy";
+// import Policy from "../pages/Invoice/Policy";
 // Authentication related pages
 import Login from "../pages/Authentication/Login"
 import Logout from "../pages/Authentication/Logout"
@@ -69,9 +69,10 @@ import Summary from "../pages/Summary/summary"
 import EditCategory from "../pages/Category/EditCategory"
 // import Home from "../pages/Home/Home";
 import { components } from "react-select"
+import Policy from "pages/Policy/Policy"
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
-  {path:"/Policy" ,component:<Policy/>},
+  // {path:"/Policy" ,component:<Policy/>},
   {path:"/Notification" , component:<Notification/>},
   {path:"/Invoice/:invoiceId" , component:<Invoice/>},
   { path: "/transaction", component: <Transaction /> },
@@ -147,6 +148,7 @@ const publicRoutes = [
   { path: "/login", component: <Login /> },
   { path: "/forgot-password", component: <ForgetPwd /> },
   { path: "/register", component: <Register /> },
+  { path: "/policy", component: <Policy/> },
 ]
 
 export { authProtectedRoutes, publicRoutes }
