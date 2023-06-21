@@ -272,13 +272,13 @@ const Viewdress = () => {
                                     <li>
                                       <p className="text-muted mb-1 text-truncate">
                                         <i className="mdi mdi-circle-medium align-middle text-primary me-1"></i>{" "}
-                                        Top Fabric : {productData?.topFabric}
+                                        {productData?.topFabric}
                                       </p>
                                     </li>
                                     <li>
                                       <p className="text-muted mb-1 text-truncate">
                                         <i className="mdi mdi-circle-medium align-middle text-primary me-1"></i>{" "}
-                                        Bottom Fabric :{" "}
+                                          {" "}
                                         {productData?.bottomFabric}
                                       </p>
                                     </li>
