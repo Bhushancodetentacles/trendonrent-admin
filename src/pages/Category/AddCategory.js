@@ -168,7 +168,7 @@ const EcommerceAddProduct = () => {
                 <div className="card-body">
                     <div className="mb-3 mt-3">
                       <label className=" mb-3">Images</label>
-                      <div className="Neon Neon-theme-dragdropbox" onClick={handleImgClick}>
+                      <div className="Neon Neon-category Neon-theme-dragdropbox" onClick={handleImgClick}>
                         <input
                           className="file_upload"
                           name="fileUrl"
