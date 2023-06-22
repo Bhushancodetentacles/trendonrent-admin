@@ -7,6 +7,9 @@ import DeleteModal from "../../components/Common/DeleteModal"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { get } from "helpers/api_helper"
 import { Pagination } from "@mui/material"
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import {
   deleteCategoryFail,
   deleteCategorySuccess,
@@ -16,6 +19,14 @@ import {
 import { toast } from "react-toastify"
 
 const AddCategory = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const dispatch = useDispatch()
   const catData = useSelector(state => state.Ecommerce)
   const [categoryData, setCategoryData] = useState([])
@@ -125,10 +136,10 @@ const AddCategory = () => {
                       </Link>
                     </div>
                   </div>
-                  </div>
-                  </div>
-                  <div className="card">
-                   <div className="card-body">
+                </div>
+              </div>
+              <div className="card">
+                <div className="card-body">
                   <div className="table-rep-plugin">
                     <div
                       className="table-responsive mb-0"
@@ -157,19 +168,46 @@ const AddCategory = () => {
                                 <tr key={item.categoryId}>
                                   <td className="text-center"> {item.categoryId} </td>
                                   <td className="text-center">
-                                    <img src={`${item.fileUrl}`} alt="product-img" title="product-img" className="avatar-md"/>
+                                    <img src={`${item.fileUrl}`} alt="product-img" title="product-img" className="avatar-md" />
                                   </td>
                                   <td className="text-center">{item.name} </td>
                                   <td className="text-center">
-                                    <a
-                                      href="#"
-                                      className="p-1"
-                                      onClick={() =>
-                                        onClickDelete(item.categoryId)
-                                      }
+
+                                    <Button
+                                      id="basic-button"
+                                      aria-controls={open ? 'basic-menu' : undefined}
+                                      aria-haspopup="true"
+                                      aria-expanded={open ? 'true' : undefined}
+                                      onClick={handleClick}
                                     >
-                                      <i className="mdi mdi-trash-can font-size-18 text-danger me-1"></i>
-                                    </a>
+                                      <i className="bx bx-dots-horizontal-rounded font-size-24 text-info"></i>
+                                    </Button>
+                                    <Menu
+                                      id="basic-menu"
+                                      anchorEl={anchorEl}
+                                      open={open}
+                                      onClose={handleClose}
+                                      MenuListProps={{
+                                        'aria-labelledby': 'basic-button',
+                                      }}
+                                    >
+                                      <MenuItem onClick={handleClose}>
+                                        <Link to="/EditCategory" className="p-1">
+                                          <i className="mdi mdi-pencil font-size-18 text-success me-1"></i>
+                                          <span className="text-success">Edit</span>
+                                        </Link>
+                                      </MenuItem>
+                                      <MenuItem onClick={handleClose}>
+                                        <a
+                                          href="#"
+                                          className="p-1"
+                                          onClick={() => onClickDelete(item.categoryId)
+                                          }
+                                        >
+                                          <i className="mdi mdi-trash-can font-size-18 text-danger me-1"></i><span className="text-danger">Delete</span>
+                                        </a></MenuItem>
+
+                                    </Menu>
                                   </td>
                                 </tr>
                               )
