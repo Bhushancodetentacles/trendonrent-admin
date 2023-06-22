@@ -9,19 +9,19 @@ function TermsAndConditions() {
         <div className="policy_page">
             <h3 className="heading_in2">Terms And Conditions</h3>
             <ul className='policy_ul'>
-            <li>Minimum Renting Duration: 3 days.
+            <li><strong>Minimum Renting Duration:</strong> <strong>3 days</strong>.
                     <ul>
-                      <li>First Day - Dress can be picked up anytime after 2:00 pm</li>
-                      <li>Second Day - Highlight day when you'll look amazing and be the center of attraction.</li>
-                      <li>Third Day  - Dress must be returned before 8:30 pm </li>
+                      <li><strong>First Day</strong> - Dress can be picked up anytime after <strong>2:00 pm</strong></li>
+                      <li><strong>Second Day</strong>- Highlight day when you'll look amazing and be the center of attraction.</li>
+                      <li><strong>Third Day </strong> - Dress must be returned before 8:30 pm </li>
                     </ul>
                   </li>
-                  <li> Renting Packages: We offer 3-day, 7-day and 10-day  packages with pickup and return on the first and last day respectively.</li>
-                  <li>Pickup and Return Timing: For all rentals, pickup after 2:00 pm and return before 8:30 pm.</li>
-                  <li>Delay in Return: Please inform us in advance for any delays. No charge for delays of a few hours, but additional charges for non-return on the designated day.</li>
-                  <li> Non-Refundable Rent Amount: Rent paid is non-refundable</li>
-                  <li>Deposit Amount: A deposit is required to secure the dress. Deposit varies for each dress and is specified during rental. Deposit returned within  3 days of dress return.</li>
-                  <li>Trend on Rent denies liability for losses caused by handover delays and defers all matters to the Pune court</li>
+                  <li><strong>Renting Packages:</strong> We offer <strong>3-day</strong>,<strong> 7-day</strong>and <strong>10-day</strong>  packages with pickup and return on the first and last day respectively.</li>
+                  <li><strong>Pickup and Return Timing:</strong> For all rentals, pickup after <strong>2:00 pm</strong> and return before <strong>8:30 pm.</strong></li>
+                  <li><strong>Delay in Return:</strong> Please inform us in advance for any delays. No charge for delays of a few hours, but additional charges for non-return on the designated day.</li>
+                  <li><strong>Non-Refundable Rent Amount:</strong> Rent paid is <strong>non-refundable</strong></li>
+                  <li><strong>Deposit Amount:</strong> A deposit is required to secure the dress. Deposit varies for each dress and is specified during rental. Deposit returned within <strong> 3 days </strong> of dress return.</li>
+                  <li><strong>Delay in handover :</strong> Trend on Rent denies liability for losses caused by handover delays and defers all matters to the <strong>Pune court</strong></li>
               
             </ul>
         
