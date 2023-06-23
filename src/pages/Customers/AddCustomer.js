@@ -418,7 +418,67 @@ const AddCustomers = () => {
                       <div className="card-title card-title_h3 mb-3">
                         Customer measurement
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-3">
+                        <div className="mb-3">
+                          <label htmlFor="height">Sleeves Rounding</label>
+                          <input
+                            id="height"
+                            name="height"
+                            type="number"
+                            className="form-control"
+                            placeholder="Sleeves Rounding"
+                            maxLength={4}
+                            step=".01"
+                          />
+                       
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="mb-3">
+                          <label htmlFor="height">Bust Size</label>
+                          <input
+                            id="height"
+                            name="height"
+                            type="number"
+                            className="form-control"
+                            placeholder="Bust Size"
+                            maxLength={4}
+                            step=".01"
+                          />
+                         
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="mb-3">
+                          <label htmlFor="height">Waist Size</label>
+                          <input
+                            id="height"
+                            name="height"
+                            type="number"
+                            className="form-control"
+                            placeholder="waist Size"
+                            maxLength={4}
+                            step=".01"
+                          />
+                        
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="mb-3">
+                          <label htmlFor="height">Bicep Rounding</label>
+                          <input
+                            id="height"
+                            name="height"
+                            type="number"
+                            className="form-control"
+                            placeholder="Bicep Rounding"
+                            maxLength={4}
+                            step=".01"
+                          />
+                         
+                        </div>
+                      </div>
+                      {/* <div className="col-md-4">
                         <div className="mb-3">
                           <label htmlFor="height">Height</label>
                           <input
@@ -471,7 +531,7 @@ const AddCustomers = () => {
                             step=".01"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       {/* <div className="col-md-4">
                         <div className="mb-3">
                           <label htmlFor="hata">Hat(A)</label>
@@ -491,7 +551,7 @@ const AddCustomers = () => {
                           </small>
                         </div>
                       </div> */}
-                      <div className="col-md-4">
+                      {/* <div className="col-md-4">
                         <div className="mb-3">
                           <label htmlFor="shoulder">Shoulder(B)</label>
                           <input
@@ -604,7 +664,7 @@ const AddCustomers = () => {
                             Measure around the fullest part of the hips
                           </small>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="d-flex flex-wrap gap-2">

@@ -19,19 +19,12 @@ import {
   Table,
 } from "reactstrap"
 
-//import Charts
-import StackedColumnChart from "./StackedColumnChart"
+
 
 //import action
 import { getChartsData as onGetChartsData } from "../../store/actions"
 
-// Pages Components
-import WelcomeComp from "./WelcomeComp"
-import MonthlyEarning from "./MonthlyEarning"
-import SocialSource from "./SocialSource"
-import ActivityComp from "./ActivityComp"
-import TopCities from "./TopCities"
-import LatestTranaction from "./LatestTranaction"
+
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
