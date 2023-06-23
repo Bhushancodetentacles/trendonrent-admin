@@ -396,9 +396,11 @@ background-color: #a0afec !important;
 margin-top: 1.5rem;
 }
 .file_upload{
-  position: absolute;
+  /* position: absolute; */
 z-index: 999;
- opacity: 0; width: 100%; max-height: 230px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;
+ opacity: 0; width: 100%; max-height: 230px; 
+ /* position: absolute;  */
+ right: 0px; left: 0px; margin-right: auto; margin-left: auto;
 }
 .file_upload11{
   display:inline-block; margin: 15px 0
