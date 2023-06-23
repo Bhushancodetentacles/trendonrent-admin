@@ -20,12 +20,15 @@ import { toast } from "react-toastify"
 
 const AddCategory = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selectedItem, setSelectedItem] = useState(null)
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = (event,item) => {
     setAnchorEl(event.currentTarget);
+    setSelectedItem(item)
   };
   const handleClose = () => {
     setAnchorEl(null);
+    setSelectedItem(null)
   };
   const dispatch = useDispatch()
   const catData = useSelector(state => state.Ecommerce)
@@ -178,21 +181,26 @@ const AddCategory = () => {
                                       aria-controls={open ? 'basic-menu' : undefined}
                                       aria-haspopup="true"
                                       aria-expanded={open ? 'true' : undefined}
-                                      onClick={handleClick}
+                                      onClick={event => handleClick(event,item)}
                                     >
                                       <i className="bx bx-dots-horizontal-rounded font-size-24 text-info"></i>
                                     </Button>
                                     <Menu
                                       id="basic-menu"
                                       anchorEl={anchorEl}
-                                      open={open}
+                                      // open={open}
+                                      open={
+                                        Boolean(anchorEl) &&
+                                        selectedItem?.categoryId ===
+                                          item.categoryId
+                                      }
                                       onClose={handleClose}
                                       MenuListProps={{
                                         'aria-labelledby': 'basic-button',
                                       }}
                                     >
                                       <MenuItem onClick={handleClose}>
-                                        <Link to="/EditCategory" className="p-1">
+                                        <Link to={`/EditCategory?id=${item.categoryId}`} className="p-1">
                                           <i className="mdi mdi-pencil font-size-18 text-success me-1"></i>
                                           <span className="text-success">Edit</span>
                                         </Link>

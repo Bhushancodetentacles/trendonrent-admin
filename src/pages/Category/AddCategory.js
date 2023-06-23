@@ -90,7 +90,8 @@ const EcommerceAddProduct = () => {
       fileInputRef.current.value = ""
     } catch (error) {
       fileInputRef.current.value = ""
-      toast.error(error.response.statusText)
+      console.log(error)
+      // toast.error(error.response.statusText)
       throw error
     }
   }
