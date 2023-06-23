@@ -204,6 +204,7 @@ const EcommerceAddProduct = () => {
                           )}
                         </div>
                       </div>
+                      <span className="noted"><span>*</span>Note:Accept only 212*313 image size </span>
                       {errors.fileUrl && touched.fileUrl && (
                           <span style={{ color: "red" }}>
                             {" "}
