@@ -29,7 +29,7 @@ const Adddress = () => {
     supplierName: "",
     store: "",
     description: " ",
-    dressFabric: "dressFabric",
+    dressFabric: "",
     topFabric: "",
     bottomFabric: "",
     purchasePrice: "",
@@ -387,27 +387,27 @@ const Adddress = () => {
                       </div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="dressfabric" className="header">
-                            Top Fabric
+                          <label htmlFor="dressFabric" className="header">
+                            Fabric
                           </label>
                           <input
                             type="text"
-                            name="topFabric"
+                            name="dressFabric"
                             className="form-control"
-                            placeholder="Top Fabric"
+                            placeholder="Dress Fabric"
                             onChange={handleChange}
                             onBlur={handleBlur}
                           />
-                          {errors.topFabric && touched.topFabric && (
+                          {errors.dressFabric && touched.dressFabric && (
                             <span style={{ color: "red" }}>
                               {" "}
-                              {errors.topFabric}{" "}
+                              {errors.dressFabric}{" "}
                             </span>
                           )}
                         </div>
                       </div>
 
-                      <div className="col-sm-6">
+                      {/* <div className="col-sm-6">
                         <div className="mb-3">
                           <label htmlFor="dressfabric" className="header">
                             Bottom Fabric
@@ -428,7 +428,7 @@ const Adddress = () => {
                             </span>
                           )}
                         </div>
-                      </div>
+                      </div> */}
                       <div className="mb-3 row">
                         <div className="card-title  card-title_h3 mb-3">
                           Packages

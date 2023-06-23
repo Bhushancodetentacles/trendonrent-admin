@@ -13,7 +13,7 @@ export const productValidationSchema = Yup.object({
     .required("Supplier name is required")
     .max(100, "Supplier Name must be less than or equal to 100")
     .nullable(),
-  description: Yup.string().required("Description  is required"),
+  description: Yup.string().required("Description  is required").max(1000,"Description should be less than 10000 letters"),
   purchasePrice: Yup.number()
     .required("Purchase price is required")
     .typeError("Purchase Price must be a valid number"),
@@ -31,6 +31,9 @@ export const productValidationSchema = Yup.object({
     .required("Rent Price is required")
     .nullable()
     .typeError("Rent Price must be a valid number"),
+  dressFabric: Yup.string().required("dressFabric is required")
+    .nullable()
+    .max(50, "Dress Fabric must be less than or equal to 50 letters"),
   topFabric: Yup.string()
     .nullable()
     .max(50, "Top Fabric must be less than or equal to 50"),

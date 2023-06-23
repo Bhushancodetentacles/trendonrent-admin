@@ -39,6 +39,7 @@ const EcommerceAddProduct = () => {
     rentPriceFor3Days: data?.rentPriceFor3Days,
     rentPriceFor7Days: data?.rentPriceFor7Days,
     rentPriceFor10Days: data?.rentPriceFor10Days,
+    dressFabric: data?.dressFabric,
     topFabric: data?.topFabric,
     bottomFabric: data?.bottomFabric,
     depositAmount: data?.depositAmount,
@@ -369,27 +370,27 @@ const EcommerceAddProduct = () => {
                       <div className="card-title  card-title_h3 mb-3">Fabric</div>
                       <div className="col-sm-6">
                         <div className="mb-3">
-                          <label htmlFor="dressfabric" className="header">Top Fabric</label>
+                          <label htmlFor="dressfabric" className="header">Fabric</label>
 
                           <input
                             type="text"
                             className="form-control"
-                            name="topFabric"
-                            placeholder="Top Fabric"
-                            value={values.topFabric}
+                            name="dressFabric"
+                            placeholder="dressFabric"
+                            value={values.dressFabric}
                             onChange={handleChange}
                             onBlur={handleBlur}
                           />
-                          {errors.topFabric && touched.topFabric && (
+                          {errors.dressFabric && touched.dressFabric && (
                             <span style={{ color: "red" }}>
                               {" "}
-                              {errors.topFabric}{" "}
+                              {errors.dressFabric}{" "}
                             </span>
                           )}
                         </div>
                       </div>
 
-                      <div className="col-sm-6">
+                      {/* <div className="col-sm-6">
                         <div className="mb-3">
                           <label htmlFor="dressfabric" className="header">Bottom Fabric</label>
 
@@ -409,7 +410,7 @@ const EcommerceAddProduct = () => {
                             </span>
                           )}
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="card-title  card-title_h3 mb-3">Packages</div>
 
