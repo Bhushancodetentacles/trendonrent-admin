@@ -16,15 +16,15 @@ import ProjectsList from "../pages/Projects/projects-list"
 import ProjectsOverview from "../pages/Projects/ProjectOverview/projects-overview"
 import ProjectsCreate from "../pages/Projects/projects-create"
 
-// //Ecommerce Pages
-import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts/index"
-import EcommerceProductDetail from "../pages/Ecommerce/EcommerceProducts/EcommerceProductDetail"
-import EcommerceOrders from "../pages/Ecommerce/EcommerceOrders/index"
-import EcommerceCustomers from "../pages/Ecommerce/EcommerceCustomers/index"
-import EcommerceCart from "../pages/Ecommerce/EcommerceCart"
-import EcommerceCheckout from "../pages/Ecommerce/EcommerceCheckout"
-import EcommerceShops from "../pages/Ecommerce/EcommerceShops/index"
-import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct"
+// // //Ecommerce Pages
+// import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts/index"
+// import EcommerceProductDetail from "../pages/Ecommerce/EcommerceProducts/EcommerceProductDetail"
+// import EcommerceOrders from "../pages/Ecommerce/EcommerceOrders/index"
+// import EcommerceCustomers from "../pages/Ecommerce/EcommerceCustomers/index"
+// import EcommerceCart from "../pages/Ecommerce/EcommerceCart"
+// import EcommerceCheckout from "../pages/Ecommerce/EcommerceCheckout"
+// import EcommerceShops from "../pages/Ecommerce/EcommerceShops/index"
+// import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct"
 
 //Invoices
 import InvoicesList from "../pages/Invoices/invoices-list"
@@ -110,18 +110,6 @@ const authProtectedRoutes = [
   // //profile
   { path: "/profile", component: <UserProfile /> },
 
-  //Ecommerce
-  {
-    path: "/ecommerce-product-detail/:id",
-    component: <EcommerceProductDetail />,
-  },
-  { path: "/ecommerce-products", component: <EcommerceProducts /> },
-  { path: "/ecommerce-orders", component: <EcommerceOrders /> },
-  { path: "/ecommerce-customers", component: <EcommerceCustomers /> },
-  { path: "/ecommerce-cart", component: <EcommerceCart /> },
-  { path: "/ecommerce-checkout", component: <EcommerceCheckout /> },
-  { path: "/ecommerce-shops", component: <EcommerceShops /> },
-  { path: "/ecommerce-add-product", component: <EcommerceAddProduct /> },
 
   //Invoices
   { path: "/invoices-list", component: <InvoicesList /> },
