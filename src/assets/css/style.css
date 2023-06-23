@@ -1049,3 +1049,10 @@ address{
 .Neon-category img{
   width: 25%;
 }
+.noted{
+  color: #807e7e;
+  font-size: 11px;
+}
+.noted span{
+  color:#ff0000;
+}
