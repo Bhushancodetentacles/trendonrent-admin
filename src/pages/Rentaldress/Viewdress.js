@@ -261,7 +261,7 @@ const Viewdress = () => {
                                     </h5>
                                     <span className="px-1">:</span>
                                     <p className="text-muted">
-                                    sahasb
+                                    {productData.preprationDays}
                                     </p>
                                   </div>
 
@@ -272,16 +272,16 @@ const Viewdress = () => {
                                     <li>
                                       <p className="text-muted mb-1 text-truncate">
                                         <i className="mdi mdi-circle-medium align-middle text-primary me-1"></i>{" "}
-                                        {productData?.topFabric}
+                                        {productData?.dressFabric}
                                       </p>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                       <p className="text-muted mb-1 text-truncate">
                                         <i className="mdi mdi-circle-medium align-middle text-primary me-1"></i>{" "}
                                           {" "}
                                         {productData?.bottomFabric}
                                       </p>
-                                    </li>
+                                    </li> */}
                                   </ul>
                                 </div>
                               </div>
