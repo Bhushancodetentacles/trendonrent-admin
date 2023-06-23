@@ -618,7 +618,6 @@ const Adddress = () => {
                             ref={frontFileInputRef}
                             accept="image/png, image/jpeg, image/gif"
                             id="filer_input2"
-                            multiple="multiple"
                             type="file"
                             onChange={handleFrontImage}
                             onBlur={handleBlur}
@@ -667,7 +666,6 @@ const Adddress = () => {
                             ref={backFileInputRef}
                             accept="image/*"
                             id="filer_input2"
-                            multiple="multiple"
                             type="file"
                             onChange={e => handleBackImage(e)}
                             onBlur={handleBlur}
