@@ -18,7 +18,7 @@ import axios from "axios"
 //redux
 import { useSelector, useDispatch } from "react-redux"
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import withRouter from "components/Common/withRouter"
+import withRouter from "../../components/Common/withRouter"
 
 // Formik validation
 import * as Yup from "yup"
@@ -33,9 +33,10 @@ import {
 } from "../../store/actions"
 
 // import images
-import profile from "assets/images/profile-img.png"
-import logo from "assets/images/logo.svg"
-import { post } from "helpers/api_helper"
+import profile from "../../assets/images/profile-img.png"
+import logo from "../../assets/images/logo.svg"
+import { post } from "../../helpers/api_helper"
+import { isBrowser } from "../../utils/utils"
 
 //Import config
 
@@ -63,8 +64,11 @@ const Login = props => {
       try {
         const res = await post("/Admin/login", data)
         const result = await res.data
-        localStorage.setItem("authUser", result.admin.username)
-        localStorage.setItem("accessToken", result.admin.tokenId)
+        if(isBrowser()){
+      
+          localStorage.setItem("authUser", result.admin.username)
+          localStorage.setItem("accessToken", result.admin.tokenId)
+        }
         // dispatch(loginUser(values, props.router.navigate));
         dispatch(loginSuccess(res))
         navigate("/dashboard")

@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../../components/Common/withRouter";
 import { isEmpty } from "lodash";
 import { Col, Container, Row } from "reactstrap";
 
 //Import Breadcrumb
-import Breadcrumbs from "components/Common/Breadcrumb";
+import Breadcrumbs from "../../../components/Common/Breadcrumb";
 
-import { getProjectDetail as onGetProjectDetail } from "store/projects/actions";
+import { getProjectDetail as onGetProjectDetail } from "../../../store/projects/actions";
 import ProjectDetail from "./projectDetail";
 import TeamMembers from "./teamMembers";
 import OverviewChart from "./overviewChart";
-import { options, series } from "common/data/projects";
+import { options, series } from "../../../common/data/projects";
 import AttachedFiles from "./attachedFiles";
 import Comments from "./comments";
 

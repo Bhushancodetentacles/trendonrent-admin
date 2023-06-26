@@ -16,7 +16,7 @@ import { useFormik } from "formik/dist"
 import { toast } from "react-toastify"
 import axios from "axios"
 import { useDispatch } from "react-redux"
-import { get, post } from "helpers/api_helper"
+import { get, post } from "../../helpers/api_helper"
 
 const EditCategory = () => {
   const dispatch = useDispatch()

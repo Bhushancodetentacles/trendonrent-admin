@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import withRouter from 'components/Common/withRouter';
+import withRouter from '../../components/Common/withRouter';
 import PropTypes from "prop-types";
 
 //actions
@@ -20,6 +20,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
 import RightSidebar from "../CommonForBoth/RightSidebar";
+import { isBrowser } from '../../utils/utils';
 
 const Layout = (props) => {
 
@@ -50,7 +51,10 @@ const Layout = (props) => {
   }, [pathName.pathname]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if(isBrowser()){
+      
+      window.scrollTo(0, 0);
+    }
   }, []);
 
 

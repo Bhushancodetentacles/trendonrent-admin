@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { Link, useParams } from "react-router-dom"
-import { getOrderDetailFail, getOrderDetailSuccess } from "store/actions"
-import { get } from "helpers/api_helper"
+import { getOrderDetailFail, getOrderDetailSuccess } from "../../store/actions"
+import { get } from "../../helpers/api_helper"
 import { useSelector, useDispatch } from "react-redux"
 
 const Vieworder = () => {

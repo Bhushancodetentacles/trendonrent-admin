@@ -34,6 +34,7 @@ import {
   toggleLeftmenu,
   changeSidebarType,
 } from "../../store/actions";
+import { isBrowser } from '../../utils/utils';
 
 const Header = props => {
   const [search, setsearch] = useState(false);
@@ -69,11 +70,14 @@ const Header = props => {
 
   function tToggle() {
     var body = document.body;
-    if (window.screen.width <= 998) {
-      body.classList.toggle("sidebar-enable");
-    } else {
-      body.classList.toggle("vertical-collpsed");
-      body.classList.toggle("sidebar-enable");
+    if(isBrowser()){
+      
+      if (window.screen.width <= 998) {
+        body.classList.toggle("sidebar-enable");
+      } else {
+        body.classList.toggle("vertical-collpsed");
+        body.classList.toggle("sidebar-enable");
+      }
     }
 
   }

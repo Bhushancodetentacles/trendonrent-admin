@@ -13,12 +13,12 @@ import img from "../../assets/images/dress/adharcard.jpg"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import DeleteModal from "../../components/Common/DeleteModal"
 import { result } from "lodash"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 import { Pagination } from "@mui/material"
-import { deleteCustomerFail, deleteCustomerSuccess } from "store/actions"
+import { deleteCustomerFail, deleteCustomerSuccess } from "../../store/actions"
 import { useDispatch } from "react-redux"
 import { toast } from "react-toastify"
-import { Errorhandler } from "Error/ErrorHandler"
+import { Errorhandler } from "../../Error/ErrorHandler"
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';

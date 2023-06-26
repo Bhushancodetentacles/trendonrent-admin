@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../components/Common/withRouter";
 import {
   changeLayout,
   changeLayoutMode,
@@ -20,6 +20,7 @@ import RightSidebar from "../CommonForBoth/RightSidebar";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
+import { isBrowser } from "../../utils/utils";
 
 const Layout = props => {
   const dispatch = useDispatch();
@@ -79,7 +80,10 @@ const Layout = props => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if(isBrowser()){
+      
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   useEffect(() => {

@@ -8,11 +8,12 @@ import SimpleBar from "simplebar-react";
 
 // MetisMenu
 import MetisMenu from "metismenujs";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../components/Common/withRouter";
 import { Link } from "react-router-dom";
 
 //i18n
 import { withTranslation } from "react-i18next";
+import { isBrowser } from "../../utils/utils";
 
 const SidebarContent = props => {
 
@@ -128,15 +129,21 @@ const SidebarContent = props => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if(isBrowser()){
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     activeMenu();
   }, [activeMenu]);
 
   function scrollElement(item) {
     if (item) {
       const currentPosition = item.offsetTop;
-      if (currentPosition > window.innerHeight) {
-        ref.current.getScrollElement().scrollTop = currentPosition - 300;
+      if(isBrowser()){
+      
+        if (currentPosition > window.innerHeight) {
+          ref.current.getScrollElement().scrollTop = currentPosition - 300;
+        }
       }
     }
   }

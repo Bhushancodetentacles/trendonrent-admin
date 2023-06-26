@@ -1,4 +1,4 @@
-import { get } from "helpers/api_helper"
+import { get } from "../helpers/api_helper"
 
 // getting data from category list
 export const getCategorySelectList = async () => {

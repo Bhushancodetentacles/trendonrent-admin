@@ -11,7 +11,8 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import logo from "../../assets/images/logo.png"
 import sidepart from "../../assets/images/Invoice/desin.png"
 import sidepart1 from "../../assets/images/Invoice/foot.png"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
+import { isBrowser } from "../../utils/utils"
 
 //redux
 
@@ -46,7 +47,10 @@ const Invoice = props => {
 
   //Print the Invoice
   const printInvoice = () => {
-    window.print()
+    if(isBrowser()){
+      
+      window.print()
+    }
   }
 
   useEffect(() => {

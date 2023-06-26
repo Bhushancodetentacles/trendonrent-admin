@@ -14,10 +14,10 @@ import {
   deleteOrderSuccess,
   getOrdersFail,
   getOrdersSuccess,
-} from "store/actions"
+} from "../../store/actions"
 import { useNavigate } from "react-router-dom/dist"
 import { useSelector, useDispatch } from "react-redux"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 import { toast } from "react-toastify"
 
 const Order = () => {

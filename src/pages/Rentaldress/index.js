@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import DeleteModal from "../../components/Common/DeleteModal"
-import "assets/scss/datatables.scss"
+import "../../assets/scss/datatables.scss"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import "../../assets/css/style.css"
 import { Link } from "react-router-dom"
@@ -18,7 +18,7 @@ import {
   deleteProductSuccess,
   getProductsFail,
   getProductsSuccess,
-} from "store/actions"
+} from "../../store/actions"
 import { useSelector, useDispatch } from "react-redux"
 import { toast } from "react-toastify"
 

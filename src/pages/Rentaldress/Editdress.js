@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from "react"
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { useFormik } from "formik/dist"
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { productValidationSchema } from "pages/validationSchema/validationSchema"
-import { get, post } from "helpers/api_helper"
+import { get, post } from "../../helpers/api_helper"
 import axios from "axios"
 import TextEditor from "components/Common/textEditor"
 import { toast } from "react-toastify"
@@ -13,7 +12,7 @@ import {
   getProductDetailFail,
   updateProductFail,
   updateProductSuccess,
-} from "store/actions"
+} from "../../store/actions"
 
 const EcommerceAddProduct = () => {
   const dispatch = useDispatch()

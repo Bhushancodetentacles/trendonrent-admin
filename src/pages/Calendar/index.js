@@ -45,7 +45,7 @@ import "@fullcalendar/bootstrap/main.css"
 
 //redux
 import { useSelector, useDispatch } from "react-redux"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 import { useLocation } from "react-router-dom"
 
 const Calender = props => {

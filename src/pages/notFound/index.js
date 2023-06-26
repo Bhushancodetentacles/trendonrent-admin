@@ -1,11 +1,15 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import error from "../../assets/error.png";
+import { isBrowser } from "../../utils/utils";
 const NotFound = () => {
   const navigate = useNavigate()
   const logout = () => {
-    localStorage.removeItem("accessToken")
-    localStorage.removeItem("authUser")
+    if(isBrowser()){
+      
+      localStorage.removeItem("accessToken")
+      localStorage.removeItem("authUser")
+    }
     navigate("/login")
   }
   return (

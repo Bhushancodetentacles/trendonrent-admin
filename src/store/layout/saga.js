@@ -16,6 +16,7 @@ import {
   changeSidebarType as changeSidebarTypeAction,
   changeTopbarTheme as changeTopbarThemeAction,
 } from "./actions"
+import { isBrowser } from "../../utils/utils"
 
 /**
  * Changes the body attribute
@@ -145,15 +146,19 @@ function* changeLeftSidebarType({ payload: { sidebarType, isMobile } }) {
         break
       case "condensed":
         yield call(manageBodyClass, "sidebar-enable", "add")
-        if (window.screen.width >= 992) {
-          yield call(manageBodyClass, "vertical-collpsed", "remove")
-          yield call(manageBodyClass, "sidebar-enable", "remove")
-          yield call(manageBodyClass, "vertical-collpsed", "add")
-          yield call(manageBodyClass, "sidebar-enable", "add")
-        } else {
-          yield call(manageBodyClass, "sidebar-enable", "add")
-          yield call(manageBodyClass, "vertical-collpsed", "add")
+        if(isBrowser()){
+
+          if (window.screen.width >= 992) {
+            yield call(manageBodyClass, "vertical-collpsed", "remove")
+            yield call(manageBodyClass, "sidebar-enable", "remove")
+            yield call(manageBodyClass, "vertical-collpsed", "add")
+            yield call(manageBodyClass, "sidebar-enable", "add")
+          } else {
+            yield call(manageBodyClass, "sidebar-enable", "add")
+            yield call(manageBodyClass, "vertical-collpsed", "add")
+          }
         }
+        
         break
       default:
         yield call(changeBodyAttribute, "data-sidebar-size", "")

@@ -19,7 +19,7 @@ import { useFormik } from "formik";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../components/Common/withRouter";
 
 //Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb";
@@ -27,6 +27,7 @@ import Breadcrumb from "../../components/Common/Breadcrumb";
 import avatar from "../../assets/images/users/avatar-1.jpg";
 // actions
 import { editProfile, resetProfileFlag } from "../../store/actions";
+import { isBrowser } from "../../utils/utils";
 
 const UserProfile = () => {
 
@@ -45,23 +46,26 @@ const UserProfile = () => {
   }));
 
   useEffect(() => {
-    if (localStorage.getItem("authUser")) {
-      const obj = JSON.parse(localStorage.getItem("authUser"));
-      if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
-        setname(obj.displayName);
-        setemail(obj.email);
-        setidx(obj.uid);
-      } else if (
-        process.env.REACT_APP_DEFAULTAUTH === "fake" ||
-        process.env.REACT_APP_DEFAULTAUTH === "jwt"
-      ) {
-        setname(obj.username);
-        setemail(obj.email);
-        setidx(obj.uid);
+    if(isBrowser()){
+      
+      if (localStorage.getItem("authUser")) {
+        const obj = JSON.parse(localStorage.getItem("authUser"));
+        if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
+          setname(obj.displayName);
+          setemail(obj.email);
+          setidx(obj.uid);
+        } else if (
+          process.env.REACT_APP_DEFAULTAUTH === "fake" ||
+          process.env.REACT_APP_DEFAULTAUTH === "jwt"
+        ) {
+          setname(obj.username);
+          setemail(obj.email);
+          setidx(obj.uid);
+        }
+        setTimeout(() => {
+          dispatch(resetProfileFlag());
+        }, 3000);
       }
-      setTimeout(() => {
-        dispatch(resetProfileFlag());
-      }, 3000);
     }
   }, [dispatch, success]);
 

@@ -3,6 +3,7 @@ import firebase from 'firebase/compat/app';
 // Add the Firebase products that you want to use
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { isBrowser } from '../utils/utils';
 
 class FirebaseAuthBackend {
   constructor(firebaseConfig) {
@@ -10,10 +11,12 @@ class FirebaseAuthBackend {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-          localStorage.setItem("authUser", JSON.stringify(user));
-        } else {
-          localStorage.removeItem("authUser");
+        if(isBrowser()){ 
+          if (user) {
+            localStorage.setItem("authUser", JSON.stringify(user));
+          } else {
+            localStorage.removeItem("authUser");
+          }
         }
       });
     }
@@ -155,15 +158,21 @@ class FirebaseAuthBackend {
   };
 
   setLoggeedInUser = user => {
-    localStorage.setItem("authUser", JSON.stringify(user));
+    if(isBrowser()){
+      
+      localStorage.setItem("authUser", JSON.stringify(user));
+    }
   };
 
   /**
    * Returns the authenticated user
    */
   getAuthenticatedUser = () => {
-    if (!localStorage.getItem("authUser")) return null;
-    return JSON.parse(localStorage.getItem("authUser"));
+        if(isBrowser()){
+      
+          if (!localStorage.getItem("authUser")) return null;
+          return JSON.parse(localStorage.getItem("authUser"));
+    }
   };
 
   /**

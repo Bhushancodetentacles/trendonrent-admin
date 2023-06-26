@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
@@ -8,15 +8,12 @@ import { Provider } from "react-redux";
 
 import store from "./store";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-    <Provider store={store}>
-      <React.Fragment>
-        <BrowserRouter basename={'/admin'}>
-          <App />
-        </BrowserRouter>
-      </React.Fragment>
-    </Provider>
-);
+ReactDOM.hydrate(<Provider store={store}>
+  <React.Fragment>
+    <BrowserRouter basename={'/admin'}>
+      <App />
+    </BrowserRouter>
+  </React.Fragment>
+</Provider>, document.getElementById("root"));
 
 serviceWorker.unregister()

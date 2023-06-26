@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../components/Common/withRouter";
 import { Card, CardBody, Col, Container, Row, Table } from "reactstrap";
 import { isEmpty, map } from "lodash";
 
@@ -14,6 +14,7 @@ import logoLight from "../../assets/images/logo-light.png";
 import { getInvoiceDetail as onGetInvoiceDetail } from "../../store/invoices/actions";
 //redux
 import { useSelector, useDispatch } from "react-redux";
+import { isBrowser } from "../../utils/utils";
 
 const InvoiceDetail = props => {
 
@@ -37,7 +38,10 @@ const InvoiceDetail = props => {
 
   //Print the Invoice
   const printInvoice = () => {
-    window.print();
+    if(isBrowser()){
+      
+      window.print();
+    }
   };
 
   return (

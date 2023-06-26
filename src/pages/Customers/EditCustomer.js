@@ -10,10 +10,10 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { useDispatch } from "react-redux"
 import { useFormik } from "formik/dist"
 import { customerValidationSchema } from "pages/validationSchema/customerValidationSchema"
-import { get, post } from "helpers/api_helper"
+import { get, post } from "../../helpers/api_helper"
 
 import { useParams } from "react-router-dom"
-import { Errorhandler } from "Error/ErrorHandler"
+import { Errorhandler } from "../../Error/ErrorHandler"
 import { toast } from "react-toastify"
 import axios from "axios"
 

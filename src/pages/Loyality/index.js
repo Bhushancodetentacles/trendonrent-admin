@@ -5,7 +5,7 @@ import "../../assets/css/style.css"
 import { Pagination } from "@mui/material"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { loyaltyValidationSchema } from "pages/validationSchema/loyaltyValidationSchema"
-import { get, post } from "helpers/api_helper"
+import { get, post } from "../../helpers/api_helper"
 import { useFormik } from "formik/dist"
 import { useSelector, useDispatch } from "react-redux"
 
@@ -14,7 +14,7 @@ import {
   addLoyaltySuccess,
   getLoyaltyFail,
   getLoyaltySuccess,
-} from "store/actions"
+} from "../../store/actions"
 import { toast } from "react-toastify"
 
 const Rentorder = () => {

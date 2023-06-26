@@ -23,12 +23,12 @@ import { useSelector, useDispatch } from "react-redux"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { categoryValidationSchema } from "pages/validationSchema/categoryValidationSchema"
-import { post } from "helpers/api_helper"
+import { post } from "../../helpers/api_helper"
 import {
   addCategoryFail,
   addCategorySuccess,
   getCategorySuccess,
-} from "store/actions"
+} from "../../store/actions"
 import axios from "axios"
 import { toast } from "react-toastify"
 

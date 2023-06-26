@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { useParams } from "react-router-dom"
-import { Errorhandler } from "Error/ErrorHandler"
+import { Errorhandler } from "../../Error/ErrorHandler"
 import { useLocation } from "react-router-dom"
 import { Pagination } from "@mui/material"
 

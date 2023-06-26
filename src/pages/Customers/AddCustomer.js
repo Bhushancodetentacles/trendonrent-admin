@@ -3,17 +3,17 @@ import { Link, useNavigate } from "react-router-dom"
 import { Button } from "reactstrap"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import { useFormik } from "formik/dist"
-import { validationSchema } from "pages/validationSchema/customerValidationSchema"
-import { post } from "helpers/api_helper"
+import { validationSchema } from "../../pages/validationSchema/customerValidationSchema"
+import { post } from "../../helpers/api_helper"
 import {
   addCustomerFail,
   addCustomerSuccess,
   getCustomersSuccess,
-} from "store/actions"
+} from "../../store/actions"
 import { useDispatch } from "react-redux"
 import { toast } from "react-toastify"
 import axios from "axios"
-import { Errorhandler } from "Error/ErrorHandler"
+import { Errorhandler } from "../../Error/ErrorHandler"
 import { CleanHands } from "@mui/icons-material"
 const AddCustomers = () => {
   const [loader, setLoader] = useState(false)

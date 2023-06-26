@@ -1,8 +1,13 @@
 // const accessToken =
 //   "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFkbWluIiwiYWRtaW4iOnRydWUsImp0aSI6ImQ2MTEwYzAxLWMwYjUtNDUzNy1iNDZhLTI0NTk5Mjc2YjY1NiIsImlhdCI6MTU5MjU2MDk2MCwiZXhwIjoxNTkyNTY0NjE5fQ.QgFSQtFaK_Ktauadttq1Is7f9w0SUtKcL8xCmkAvGLw"
-// export default accessToken
 
- const token = localStorage.getItem("accessToken")
+import { isBrowser } from "../../utils/utils";
+
+// export default accessToken
+let token
+if(isBrowser()){
+     token = localStorage.getItem("accessToken")
+}
  const accessToken =- token?.tokenId;
 export default accessToken
 

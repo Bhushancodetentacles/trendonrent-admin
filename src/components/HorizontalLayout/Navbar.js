@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { Row, Col, Collapse } from "reactstrap";
 import { Link } from "react-router-dom";
-import withRouter from "components/Common/withRouter";
+import withRouter from "../../components/Common/withRouter";
 import classname from "classnames";
 
 //i18n
 import { withTranslation } from "react-i18next";
 
 import { connect } from "react-redux";
+import { isBrowser } from "../../utils/utils";
 
 const Navbar = props => {
 
@@ -41,9 +42,12 @@ const Navbar = props => {
     var items = ul.getElementsByTagName("a");
     removeActivation(items);
     for (var i = 0; i < items.length; ++i) {
-      if (window.location.pathname === items[i].pathname) {
-        matchingMenuItem = items[i];
-        break;
+      if(isBrowser()){
+      
+        if (window.location.pathname === items[i].pathname) {
+          matchingMenuItem = items[i];
+          break;
+        }
       }
     }
     if (matchingMenuItem) {

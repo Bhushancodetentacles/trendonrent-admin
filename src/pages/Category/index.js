@@ -5,7 +5,7 @@ import "../../assets/css/style.css"
 import { useSelector, useDispatch } from "react-redux"
 import DeleteModal from "../../components/Common/DeleteModal"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 import { Pagination } from "@mui/material"
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -15,7 +15,7 @@ import {
   deleteCategorySuccess,
   getCategoryFail,
   getCategorySuccess,
-} from "store/actions"
+} from "../../store/actions"
 import { toast } from "react-toastify"
 
 const AddCategory = () => {

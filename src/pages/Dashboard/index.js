@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
-import "assets/scss/datatables.scss"
+import "../../assets/scss/datatables.scss"
 import "../../assets/css/style.css"
 import {
   Container,
@@ -34,7 +34,7 @@ import { withTranslation } from "react-i18next"
 
 //redux
 import { useSelector, useDispatch } from "react-redux"
-import { get } from "helpers/api_helper"
+import { get } from "../../helpers/api_helper"
 
 const Dashboard = props => {
   const [modal, setmodal] = useState(false)

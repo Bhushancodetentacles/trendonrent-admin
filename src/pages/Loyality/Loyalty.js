@@ -10,7 +10,7 @@ import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import "../../assets/css/style.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "assets/scss/datatables.scss";
+import "../../assets/scss/datatables.scss";
 import { Pagination } from "@mui/material"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";

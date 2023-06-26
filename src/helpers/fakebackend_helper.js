@@ -1,10 +1,14 @@
 import axios from "axios";
 import { del, get, post, put } from "./api_helper";
 import * as url from "./url_helper";
+import { isBrowser } from "../utils/utils";
 
 // Gets the logged in user data from local session
 const getLoggedInUser = () => {
-  const user = localStorage.getItem("user");
+  let user
+  if(isBrowser()){   
+     user = localStorage.getItem("user");
+  }
   if (user) return JSON.parse(user);
   return null;
 };

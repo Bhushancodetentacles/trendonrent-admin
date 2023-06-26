@@ -19,8 +19,8 @@ import { Audio } from  'react-loader-spinner'
 import { Button } from "reactstrap"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
-import { get } from "helpers/api_helper"
-import { getProductDetailFail, getProductDetailSuccess } from "store/actions"
+import { get } from "../../helpers/api_helper"
+import { getProductDetailFail, getProductDetailSuccess } from "../../store/actions"
 import QRCode from "react-qr-code"
 import { is } from "immutable"
 
