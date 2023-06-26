@@ -82,7 +82,7 @@ const EditCategory = () => {
       }
       console.log(newData)
       try {
-        const res = await post("/Product/UpdateCategory", newData)
+        const res = await post("/Product/UpdateCateg*ory", newData)
         const result = await res.data
         toast.success("Category Updated successfully...!")
         navigate("/Category")

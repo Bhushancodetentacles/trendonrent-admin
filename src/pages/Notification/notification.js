@@ -139,7 +139,23 @@ const Notification = () => {
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div className="d-flex flex-wrap mt-3 gap-2">
+                                                <button
+                                                    type="submit"
+                                                    color="primary"
+                                                    className="btn btn-primary "
+                                                >
+                                                    Submit
+                                                </button>
+                                                {/* <Link
+                                                    to="/notification"
+                                                    type="submit"
+                                                    color="secondary"
+                                                    className="btn btn-secondary"
+                                                >
+                                                    Back
+                                                </Link> */}
+                                            </div>
                                     </div>
                                 </div>
                                 <div className="card">
@@ -183,23 +199,7 @@ const Notification = () => {
                                                 />
                                             </div>
 
-                                            <div className="d-flex flex-wrap mt-3 gap-2">
-                                                <button
-                                                    type="submit"
-                                                    color="primary"
-                                                    className="btn btn-primary "
-                                                >
-                                                    Submit
-                                                </button>
-                                                <Link
-                                                    to="/notification"
-                                                    type="submit"
-                                                    color="secondary"
-                                                    className="btn btn-secondary"
-                                                >
-                                                    Back
-                                                </Link>
-                                            </div>
+                                       
                                         </div>
                                     </div>
                                 </div>

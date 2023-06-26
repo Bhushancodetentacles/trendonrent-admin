@@ -179,7 +179,7 @@ const Invoice = props => {
                       <th className="">Pickup Date</th>
                       <th className="">Return Date</th>
                       <th className="">Rent</th>
-                      <th className="">Discount</th>
+                      <th className="">Deposit</th>
                       <th className="">Total</th>
                     </tr>
                   </thead>
@@ -188,7 +188,7 @@ const Invoice = props => {
                       <tbody key={index}>
                         <tr>
                           <td>{index + 1}</td>
-                          <td>puhdsha</td>
+                          <td>{item?.uniqueCode}</td>
                           <td>{item?.description}</td>
                           <td>{item?.pickDate}</td>
                           <td>{item?.returnDate}</td>
@@ -237,7 +237,8 @@ const Invoice = props => {
                     <td>
                       <div className="mb-2 d-flex justify-content-between ">
                         <strong className="heading_in1">Sub Total :</strong>
-                        <p className="text-right">{invoiceData?.subTotal}</p>
+                        {/* <p className="text-right">{invoiceData?.subTotal}</p> */}
+                        <p className="text-right">0</p>
                       </div>
                     </td>
                   </tr>
@@ -245,16 +246,27 @@ const Invoice = props => {
                     <td>
                       <div className="mb-2 d-flex justify-content-between ">
                         <strong className="heading_in1">GST:</strong>
-                        <p className="text-right">{invoiceData?.gstTotal}</p>
+                        {/* <p className="text-right">{invoiceData?.gstTotal}</p> */}
+                        <p className="text-right">0</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="mb-2 d-flex justify-content-between ">
-                        <strong className="heading_in1">Despoit :</strong>
+                        <strong className="heading_in1">Discount :</strong>
                         <p className="text-right">
-                          {invoiceData?.depositTotal}
+                          0
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div className="mb-2 d-flex justify-content-between ">
+                        <strong className="heading_in1">Loyalty Point Redeemed :</strong>
+                        <p className="text-right">
+                          0
                         </p>
                       </div>
                     </td>
@@ -263,7 +275,8 @@ const Invoice = props => {
                     <td>
                       <div className="mb-2 d-flex justify-content-between ">
                         <strong className=" total_heading">Total :</strong>
-                        <p className="text-right">{invoiceData?.grandTotal}</p>
+                        {/* <p className="text-right">{invoiceData?.grandTotal}</p> */}
+                        <p className="text-right">0</p>
                       </div>
 
                     </td>
@@ -373,9 +386,19 @@ const Invoice = props => {
                 </ul>
               </div>
 
-              <div className="row print-row float-end">
+              <div className="row print-row float-end ">
                 <table className="table-print">
                   <tr>
+                    <td>
+                    <span className="float-start">Signature</span>
+                    <div className="form-group service-upload mt-3 mb-3">
+                  
+                    </div>
+                     </td> 
+                   
+
+                     </tr>
+                     <tr>
                     <td>
                       <div className="d-print-none">
                         <div className="float-end">
