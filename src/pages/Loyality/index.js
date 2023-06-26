@@ -106,6 +106,8 @@ const Rentorder = () => {
     }
   }, [])
 
+  console.log(currentPage)
+
   //meta title
   document.title = "Trends on Rent"
 
