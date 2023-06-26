@@ -318,11 +318,11 @@ const Invoice = props => {
                     <ul>
                       <li><b>First Day-</b> Dress can be picked up anytime after <strong>2:00 pm</strong> </li>
                       <li><b>Second Day - </b> Highlight day when you'll look amazing and be the center of attraction.</li>
-                      <li><b>Third Day  - </b> Dress must be returned before <strong>8:30 pm </strong></li>
+                      <li><b>Third Day  - </b> Dress must be returned before <strong>7:30 pm </strong></li>
                     </ul>
                   </li>
                   <li><b> Renting Packages: </b> We offer <strong>3-day</strong>, <strong>7-day</strong> and <strong>10-day </strong> packages with pickup and return on the first and last day respectively.</li>
-                  <li> <b>Pickup and Return Timing:</b> For all rentals, pickup after <strong>2:00 pm </strong> and return before <strong>8:30 pm.</strong></li>
+                  <li> <b>Pickup and Return Timing:</b> For all rentals, pickup after <strong>2:00 pm </strong> and return before <strong>7:30 pm.</strong></li>
                   <li><b>Delay in Return:</b> Please inform us in advance for any delays. No charge for delays of a few hours, but additional charges for non-return on the designated day.</li>
                   <li><b> Non-Refundable Rent Amount:</b> Rent paid is non-refundable</li>
                   <li><b>Deposit Amount:</b> A deposit is required to secure the dress. Deposit varies for each dress and is specified during rental. Deposit returned within <strong> 3 days </strong> of dress return.</li>
