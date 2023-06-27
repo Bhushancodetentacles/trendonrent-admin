@@ -26,6 +26,7 @@ jobs:
 
       - run:
           name: Install dependencies
+          command: rm -rf node_modules
           command: npm install
       -run:
           name: clear cache
@@ -44,7 +45,7 @@ jobs:
 
       - run:
           name: Fix react-apexcharts module issue
-          command: npm install apexcharts@1.4.0
+          command: npm install apexcharts@latest
 
       - run:
           name: Deploy to main server
