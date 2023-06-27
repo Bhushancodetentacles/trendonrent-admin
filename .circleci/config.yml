@@ -11,9 +11,18 @@ jobs:
       - run:
           name: Build the app
           command: npm run build
-workflows:          
-jobs:
+
+workflows:
+  version: 2
   build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+
+jobs:
+  deploy:
     docker:
       - image: circleci/node:14
     steps:
@@ -31,7 +40,7 @@ jobs:
 
       - run:
           name: Install latest react-scripts
-          command: npm install react
+          command: npm install react-scripts@latest
 
       - run:
           name: Update npm packages
