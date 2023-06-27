@@ -1,35 +1,37 @@
 version: 2.1
 jobs:
-  build:
+  build-and-deploy-live:
     docker:
       - image: circleci/node:14
-    steps:
-      - checkout
-      - run:
-          name: Install dependencies
-          command: npm install
+    working_directory: ~/var/www/html/admin/
 
-  deploy:
-    docker:
-      - image: circleci/node:14
     steps:
       - checkout
+
       - run:
-          name: Install dependencies
-          command: npm install
-      - run:
-          name: Deploy to server
+          name: Install Node.js
           command: |
-            # Set up SSH connection to the server
-            echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-            chmod 600 ~/.ssh/id_rsa
-            ssh-keyscan -H $43.231.127.181 >> ~/.ssh/known_hosts
-            
-            # Copy the build artifacts to the server
-            scp -r build/* root@43.231.127.181:/var/www/html/
+            curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
 
-            # Optionally, restart the server or perform any additional setup steps
-            ssh user@$SERVER_IP "sudo systemctl restart your-application"
+      - run:
+          name: Install dependencies
+          command: npm install
 
-            # Clean up the SSH key from the build environment
-            rm ~/.ssh/id_rsa
+      - run:
+          name: Install latest react-scripts
+          command: npm install react-scripts@latest
+
+      - run:
+          name: Update npm packages
+          command: npm update
+
+      - run:
+          name: Build the app
+          command: npm run build:prod
+
+      - run:
+          name: Deploy to main server
+          command: |
+            sudo apt-get install -y sshpass
+            sshpass -p $PASSWORD scp -r ./build/* $USERNAME@$HOSTNAME:/var/www/html/admin
