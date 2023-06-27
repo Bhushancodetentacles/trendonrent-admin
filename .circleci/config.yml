@@ -27,7 +27,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-
+      -run:
+          name: clear cache
+          command: npm cache clean --force
       - run:
           name: Install latest react-scripts
           command: npm install react-scripts@latest
