@@ -3,8 +3,20 @@ jobs:
   build:
     docker:
       - image: circleci/node:14
-
-  deploy:
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Build the app
+          command: npm run build
+workflows:          
+version: 2.1
+jobs:
+  build-and-deploy:
+    docker:
+      - image: circleci/node:14
     steps:
       - checkout
 
