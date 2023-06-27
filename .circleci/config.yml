@@ -28,7 +28,7 @@ jobs:
 
       - run:
           name: Build the app
-          command: npm run build:prod
+          command: npm run build
 
       - run:
           name: Deploy to main server
