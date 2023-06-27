@@ -42,7 +42,7 @@ jobs:
 
       - run:
           name: Fix react-apexcharts module issue
-          command: npm install apexcharts@3.28.0
+          command: npm install apexcharts@1.4.0
 
       - run:
           name: Deploy to main server
