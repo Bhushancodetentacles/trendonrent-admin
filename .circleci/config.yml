@@ -8,6 +8,7 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
+
   deploy:
     docker:
       - image: circleci/node:14
@@ -18,4 +19,17 @@ jobs:
           command: npm install
       - run:
           name: Deploy to server
-          command: npm run deploy
+          command: |
+            # Set up SSH connection to the server
+            echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            ssh-keyscan -H $43.231.127.181 >> ~/.ssh/known_hosts
+            
+            # Copy the build artifacts to the server
+            scp -r build/* root@43.231.127.181:/var/www/html/
+
+            # Optionally, restart the server or perform any additional setup steps
+            ssh user@$SERVER_IP "sudo systemctl restart your-application"
+
+            # Clean up the SSH key from the build environment
+            rm ~/.ssh/id_rsa
