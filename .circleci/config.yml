@@ -41,6 +41,10 @@ jobs:
           command: npm run build
 
       - run:
+          name: Fix react-apexcharts module issue
+          command: npm install apexcharts@3.28.0
+
+      - run:
           name: Deploy to main server
           command: |
             sudo apt-get install -y sshpass
