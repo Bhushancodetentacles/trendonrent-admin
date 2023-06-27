@@ -1,10 +1,10 @@
 version: 2.1
 jobs:
-  build-and-deploy-live:
+  build:
     docker:
       - image: circleci/node:14
-    working_directory: ~/var/www/html/admin/
 
+  deploy:
     steps:
       - checkout
 
