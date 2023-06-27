@@ -52,6 +52,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
+    "react-apexcharts": "^1.4.0",
     "react-background-video-player": "^1.1.8",
     "react-chartist": "^0.14.4",
     "react-chartjs-2": "^2.11.1",
