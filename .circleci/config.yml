@@ -12,7 +12,6 @@ jobs:
           name: Build the app
           command: npm run build
 workflows:          
-version: 2.1
 jobs:
   build-and-deploy:
     docker:
