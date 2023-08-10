@@ -27,7 +27,7 @@ jobs:
 
     - name: Build the app
       run: npm run build:prod
-
+      #hello
     - name: Deploy to main server
       uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
       with:
