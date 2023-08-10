@@ -35,4 +35,4 @@ jobs:
         user: ${{ secrets.USERNAME }}
         host: ${{ secrets.HOSTNAME }}
         scp: |
-          './build/*' => /var/www/html/admin
+          './build/*' => /var/www/
